@@ -1,0 +1,104 @@
+:root {
+	/* Html Setting */
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 15px;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* Variable of color */
+	--primary-color: #63c5ea;
+	--secondary-color: #a1e1fa;
+	--third-color: #4a8db7;
+	--fourth-color: #3b7197;
+}
+* {
+	text-decoration: none;
+	/* text color */
+	color: #252525;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background: var(--fourth-color);
+	overflow: hidden;
+}
+.menu {
+	/* Use transform:scale to resize the menu (desktop screen) */
+	transform: scale(1);
+	width: 300px;
+	height: auto;
+	background: var(--primary-color);
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.menu .btn {
+	display: block;
+	padding: 1rem;
+	border-bottom: solid 1px var(--secondary-color);
+	border-top: solid 1px var(--third-color);
+	position: relative;
+	font-weight: 600;
+}
+.menu .submenu {
+	background: var(--secondary-color);
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height 0.8s ease-out;
+}
+.menu .submenu a {
+	display: block;
+	padding: 1rem;
+	position: relative;
+}
+.menu .submenu a::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 5px;
+	background: var(--third-color);
+	opacity: 0;
+	transition: all 0.5s;
+}
+
+/* Indent Item when mouse hover */
+.menu .submenu a:hover {
+	padding-left: calc(1rem + 5px);
+}
+.menu .submenu a:hover::before {
+	opacity: 1;
+}
+
+/* Expand Menu List when clicked */
+.item:target .submenu {
+	max-height: 20rem;
+}
+
+/* Responsive Setting: just change the scale */
+/* mobile screen */
+@media only screen and (max-width: 768px) {
+	.menu {
+		transform: scale(1);
+	}
+}
+/* ipad screen */
+@media only screen and (min-width: 768px) and (max-width: 1114px) {
+	.menu {
+		transform: scale(1);
+	}
+}
+/* folding-mobile screen */
+@media only screen and (max-width: 400px) {
+	.menu {
+		transform: scale(0.7);
+	}
+}
