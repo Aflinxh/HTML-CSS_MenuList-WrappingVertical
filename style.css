@@ -96,12 +96,18 @@ body {
 /* ipad screen */
 @media only screen and (min-width: 768px) and (max-width: 1114px) {
 	.menu {
-		transform: scale(1);
+		transform: scale(1.5);
 	}
 }
 /* folding-mobile screen */
 @media only screen and (max-width: 400px) {
 	.menu {
 		transform: scale(0.7);
+	}
+}
+/* Bigger Screen */
+@media only screen and (min-width: 1115px) and (min-height: 769px) {
+	.menu {
+		transform: scale(2);
 	}
 }
