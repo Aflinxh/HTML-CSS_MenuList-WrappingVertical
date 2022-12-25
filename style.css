@@ -94,7 +94,7 @@ body {
 	}
 }
 /* ipad screen */
-@media only screen and (min-width: 768px) and (max-width: 1114px) {
+@media only screen and (min-width: 768px) and (max-width: 1114px) and (min-height: 1024) {
 	.menu {
 		transform: scale(1.5);
 	}
