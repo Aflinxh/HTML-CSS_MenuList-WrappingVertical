@@ -11,7 +11,7 @@ Menu List Wrapping Vertical, features:
 
 - Vertically Wrapping and Expanding menu-list concept
 - No limit of how many menus can be added, recommendation: 3-5 menus
-- No limit of how many items can be added per menu, recommendation: 3-5 items
+- Item limit up to 6 items
 - Auto adjusting length of Menu according to the number of menus and items
 - Indent the text of item when mouse hover
 - Easy to resize the menu, using css

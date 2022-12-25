@@ -1,7 +1,5 @@
 :root {
 	/* Html Setting */
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-size: 15px;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -10,11 +8,15 @@
 	--secondary-color: #a1e1fa;
 	--third-color: #4a8db7;
 	--fourth-color: #3b7197;
+	--text-color: #252525;
 }
 * {
+	/* Change the font below */
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 15px;
 	text-decoration: none;
 	/* text color */
-	color: #252525;
+	color: var(--text-color);
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -26,7 +28,7 @@ body {
 	justify-content: center;
 	min-height: 100vh;
 	background: var(--fourth-color);
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 .menu {
 	/* Use transform:scale to resize the menu (desktop screen) */
@@ -49,6 +51,7 @@ body {
 .menu .submenu {
 	background: var(--secondary-color);
 	overflow: hidden;
+	/* Closing menu list animation when other's clicked */
 	max-height: 0;
 	transition: max-height 0.8s ease-out;
 }
